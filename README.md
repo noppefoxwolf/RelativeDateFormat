@@ -17,6 +17,11 @@ Date.aDayAgo.formatted(.relative(unitsStyle: .condensed))
 Date.aMonthAgo.formatted(.relative(unitsStyle: .condensed))
 ```
 
+# Localization
+
+- [x] en
+- [x] ja
+
 # License
 
 RelativeDateFormat is available under the MIT license. See the LICENSE file for more info.
