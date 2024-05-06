@@ -14,7 +14,7 @@ Date.now.formatted(.relative(unitsStyle: .condensed))
 Date.aDayAgo.formatted(.relative(unitsStyle: .condensed))
 
 // 2024/01/01
-Date.1mAgo.formatted(.relative(unitsStyle: .condensed))
+Date.aMonthAgo.formatted(.relative(unitsStyle: .condensed))
 ```
 
 # License
