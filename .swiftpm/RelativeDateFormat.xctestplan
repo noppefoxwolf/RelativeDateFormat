@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "B7C1A29E-3F23-46F4-9781-5AEF56A3850E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en",
+    "region" : "US"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "RelativeDateFormatTests",
+        "name" : "RelativeDateFormatTests"
+      }
+    }
+  ],
+  "version" : 1
+}

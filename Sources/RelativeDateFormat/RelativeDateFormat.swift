@@ -3,9 +3,6 @@ import Foundation
 extension Date {
     public struct CustomRelativeFormatStyle: Codable, Hashable, Sendable {
         public var unitsStyle: Date.RelativeFormatStyle.CustomUnitsStyle
-        public var locale: Locale
-        public var calendar: Calendar
-        public var capitalizationContext: FormatStyleCapitalizationContext
     }
 }
 
@@ -39,15 +36,10 @@ extension Date.CustomRelativeFormatStyle: FormatStyle {
 extension FormatStyle where Self == Date.CustomRelativeFormatStyle {
     public static func relative(
         unitsStyle: Date.RelativeFormatStyle.CustomUnitsStyle,
-        locale: Locale = .autoupdatingCurrent,
-        calendar: Calendar = .autoupdatingCurrent,
         capitalizationContext: FormatStyleCapitalizationContext = .unknown
     ) -> Date.CustomRelativeFormatStyle {
         Date.CustomRelativeFormatStyle(
-            unitsStyle: unitsStyle,
-            locale: locale,
-            calendar: calendar,
-            capitalizationContext: capitalizationContext
+            unitsStyle: unitsStyle
         )
     }
 }
@@ -61,4 +53,3 @@ extension Date.RelativeFormatStyle {
         let rawValue: String
     }
 }
-
