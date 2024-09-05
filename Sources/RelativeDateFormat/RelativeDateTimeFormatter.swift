@@ -1,7 +1,7 @@
 import Foundation
 
-final class CondensedStyleRelativeDateTimeFormatter: DateFormatter, @unchecked Sendable {
-    func localizedString(
+public final class CondensedStyleRelativeDateTimeFormatter: DateFormatter, @unchecked Sendable {
+    public func localizedString(
         for date: Date,
         relativeTo referenceDate: Date
     ) -> String {

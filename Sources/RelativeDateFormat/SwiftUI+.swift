@@ -10,7 +10,7 @@ extension Date.FormatStyle {
     public struct CustomDateStyle: Codable, Hashable, Sendable {
         let referenceDate: Date
         
-        public static func condensedRelative(to referenceDate: Date) -> CustomDateStyle {
+        public static func condensedRelative(to referenceDate: Date = .now) -> CustomDateStyle {
             CustomDateStyle(referenceDate: referenceDate)
         }
     }

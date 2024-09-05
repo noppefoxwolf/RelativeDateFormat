@@ -17,6 +17,19 @@ Date.aDayAgo.formatted(.relative(unitsStyle: .condensed))
 Date.aMonthAgo.formatted(.relative(unitsStyle: .condensed))
 ```
 
+## SwiftUI
+
+```swift
+Text(date, style: .condensedRelative())
+```
+
+## Foundation
+
+```swift
+let formatter = CondensedStyleRelativeDateTimeFormatter()
+formatter.localizedString(for: .now, relativeTo: pastDate)
+```
+
 # Localization
 
 - [x] en
