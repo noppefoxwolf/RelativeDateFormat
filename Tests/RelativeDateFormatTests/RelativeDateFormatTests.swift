@@ -4,7 +4,8 @@ import XCTest
 final class RelativeDateFormatTests: XCTestCase {
     func testFormatter() throws {
         let formatStyle = Date.CustomRelativeFormatStyle(
-            unitsStyle: .condensed
+            unitsStyle: .condensed,
+            relativeTo: .now
         )
         XCTAssertEqual(formatStyle.format(.now), "just now")
         XCTAssertEqual(formatStyle.format(.distantPast), "1/1/1")
