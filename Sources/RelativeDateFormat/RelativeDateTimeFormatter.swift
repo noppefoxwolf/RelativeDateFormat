@@ -18,11 +18,16 @@ public final class CondensedStyleRelativeDateTimeFormatter: DateFormatter, @unch
         } else if timeInterval < 86400 { // ~ 1d
             let hours = Int(timeInterval / 3600)
             return String(localized: "\(hours)h", bundle: .module)
-        } else if timeInterval < 604800 { // ~ 1w
+        } else if timeInterval < 2592000 { // ~ 1M
             let days = Int(timeInterval / 86400)
             return String(localized: "\(days)d", bundle: .module)
-        } else { // 1w ~
-            return date.formatted(date: .numeric, time: .omitted)
+        } else { // 1M ~
+            let absoluteFormatter = DateFormatter()
+            absoluteFormatter.dateFormat = "yyyy/MM/dd"
+            return absoluteFormatter.string(from: date)
+            
+            // numericだと1/1/2000のように0が省略される
+            // return date.formatted(date: .numeric, time: .omitted)
         }
     }
 }
