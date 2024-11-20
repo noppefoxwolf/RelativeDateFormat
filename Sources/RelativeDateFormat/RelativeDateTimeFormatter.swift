@@ -23,6 +23,8 @@ public final class CondensedStyleRelativeDateTimeFormatter: DateFormatter, @unch
             return String(localized: "\(days)d", bundle: .module)
         } else { // 1M ~
             let absoluteFormatter = DateFormatter()
+            // 和暦の場合、0006/01/01のようになるので、gregorianにする
+            absoluteFormatter.calendar = Calendar(identifier: .gregorian)
             absoluteFormatter.dateFormat = "yyyy/MM/dd"
             return absoluteFormatter.string(from: date)
             

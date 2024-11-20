@@ -65,6 +65,11 @@ struct RelativeDateFormatTest {
             #expect(result == expectedResult)
         }
     }
+    
+    @Test
+    func defaultCalendarSpec() {
+        #expect(DateFormatter().calendar.identifier == .gregorian)
+    }
 
     func date(from yyyymmdd: String) -> Date {
         let formatter = DateFormatter()
